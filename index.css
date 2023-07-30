@@ -13,14 +13,6 @@
 }
 }
 
-/* Estilos para telas menores que 768px */
-@media screen and (max-width: 770px) {
-  details {
-    display: block;
-  }
-  
-}
-
 /* Animação deslizandomob */
 @keyframes deslizandomob {
   /* Keyframes aqui */
@@ -28,16 +20,22 @@
 
 /* Estilos para telas menores que 600px */
 @media screen and (max-width: 600px) {
+  
 
-  img {
+    .icone-principal{
+      display: none;
+    }
+
+    img {
     max-width: 80%;
     max-height: 70%;
    
   }
 
   .pj-calc img{
-    width: 35%;
+    width: 33%;
     height: 50%;
+    
   }
   .pj-cadas img{
     width: 65%;
@@ -77,11 +75,7 @@
     width: 96%;
     
   }
-  #meus-projetos{
-    border: 0;
-    
-    width: 100%;
-  }
+  
 
 
   nav{
@@ -102,13 +96,19 @@
     
   }
 
+  .sobre-mim{
+    width: 100%;
+    animation: deslizando-mob 1s ease ;
+  }
  
 
   .option{
     display: none;
   }
 
-  
+  footer{
+    padding-bottom: 10%;
+  }
 
 .img-class{
   width: 100vw;
@@ -145,6 +145,18 @@
     height: 400px;
   }
 }
+@keyframes deslizando-mob {
+  0% {
+    transform: translateX(-600px);
+    opacity: 0;
+    
+  }
+  100% {
+    transform: translateX(0);
+    height: 400px;
+  }
+}
+
 
 
 html {
@@ -159,7 +171,59 @@ body {
 div {
   padding: 3%;
 }
+details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+  background-color: #000000;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  
+}
+details summary {
+  display: block;
+}
+details summary img {
+  height: 80px;
+  margin-top: 9px;
+}
 
+
+
+details ul {
+  
+  list-style: none;
+  
+  background-color: #000000;
+}
+
+
+details li {
+margin-top: 5px;
+padding: 5px;
+box-shadow: 2px 3px 5px rgba(245, 245, 245, 0.2);
+font-family: "Lato", sans-serif;
+font-weight: 800;
+}
+
+details li a {
+display: block;
+padding: 5px;
+text-decoration: none;
+color: #ffffff;
+border: 1px solid #ccc;
+border-radius: 3px;
+
+}
+
+details li a:hover {
+background-color: #f1f1f1;
+color: #000000;
+}
 nav {
   display: flex;
   text-align: center;
@@ -241,11 +305,11 @@ main {
 }
 
 .sobre-mim {
-  width: 35%;
+  width: 60%;
   height: 20%;
-  line-height: 20px;
+  line-height: 120%;
   border: 5px ridge white;
-  padding: 2rem;
+  padding: 6%;
   box-shadow: 2px 2px 50px rgba(245, 245, 245, 0.2);
 }
 .title-sm {
@@ -286,7 +350,7 @@ main {
   text-align: center;
   flex-direction: column;
   border: 1px solid;
-  width: 100%;
+  width: 90%;
   
   box-shadow: 2px 2px 50px rgba(245, 245, 245, 0.2);
 }
